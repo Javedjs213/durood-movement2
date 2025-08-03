@@ -5,13 +5,13 @@ function TagLine({language}) {
     <div className="min-h-[40vh] px-5 flex justify-center items-center text-[#FFF8DB]">
         {language === 'eng' && 
         <div className=" text-3xl font-bold text-center leading-11">
-            "Collecting 15 million Durood for the 1500<sup>th</sup> Birthday of Prophet Muhammad"
+            "Collecting 15 million Durood for the 1500<sup>th</sup> Milad of Prophet Muhammad"
             <p className='flex justify-center mt-5 text-lg font-bold'>(Peace Be Upon Him)</p>
         </div>
         }
         {language === 'hindi' && 
         <div className="text-3xl font-bold text-center">
-            "हमें पैग़ंबर मुहम्मद के 1500<sup>वें</sup> जन्मदिन के लिए 1.5 करोड़ दरूद इकट्ठा करने हैं"
+            "हमें पैग़ंबर मुहम्मद के 1500<sup>वें</sup> मिलाद के लिए 1.5 करोड़ दरूद इकट्ठा करने हैं"
             <p className='flex justify-center mt-5 text-lg font-bold'>(सल्लल्लाहु अलैहि वसल्लम)</p>
         </div>
         }
