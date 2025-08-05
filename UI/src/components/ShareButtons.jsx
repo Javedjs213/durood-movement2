@@ -25,47 +25,31 @@ const ShareButtons = ({language}) => {
   const encodedMessage = encodeURIComponent(message);
 
   return (
-    <div className="flex gap-4 text-2xl">
-      {/* WhatsApp */}
-      <a
-        href={`https://wa.me/?text=${encodedMessage}%20${encodedUrl}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-green-600"
-      >
-        <FaWhatsapp />
-      </a>
+    
+<div className="flex gap-4 justify-center font-sans">
+  {/* WhatsApp Button */}
+  <a
+    href={`https://wa.me/?text=${encodedMessage}%20${encodedUrl}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 bg-green-800 text-white px-4 py-2 rounded-full shadow-sm hover:bg-green-900 transition"
+  >
+    <FaWhatsapp className="text-white w-4 h-4" />
+    <span className="text-sm font-medium">Share</span>
+  </a>
 
-      {/* Instagram (link to profile as no direct share URL) */}
-      <a
-        href="https://www.instagram.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-pink-500"
-      >
-        <FaInstagram />
-      </a>
+  {/* Facebook Button (outlined) */}
+  <a
+    href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 border bg-blue-700 border-green-800 text-green-800 px-4 py-2 rounded-full hover:bg-blue-600 transition"
+  >
+    <FaFacebook className="w-4 h-4 text-white" />
+    <span className="text-sm font-medium text-white">Share</span>
+  </a>
+</div>
 
-      {/* Facebook */}
-      <a
-        href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-600"
-      >
-        <FaFacebook />
-      </a>
-
-      {/* Twitter / X */}
-      <a
-        href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedMessage}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-400"
-      >
-        <FaTwitter />
-      </a>
-    </div>
   );
 };
 

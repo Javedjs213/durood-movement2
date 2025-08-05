@@ -69,13 +69,13 @@ function SenderList({language, total}) {
     },[total])
 
   return (
-    <div className='flex justify-center mt-15 text-white'>
+    <div className='flex justify-center mt-5 text-white  font-sans'>
     <div className='w-[80vw] md:w-[65vw] lg:w-[50vw] flex flex-col items-center'>
-        <h2 className='text-2xl font-bold'>{selectLang[language].tag}</h2>
+        <h2 className='text-3xl self-start font-bold'>{selectLang[language].tag}</h2>
         <div className='w-full'>
             {userList.map((user, index) => {
             return (
-                <div key={index} className="flex mt-2 pb-1 justify-between border-b-2">
+                <div key={index} className="flex mt-2 pb-1 justify-between border-b-2 border-gray-600">
                     <div className='flex gap-3'>
                         {user.country != "" && <img src={`https://flagcdn.com/24x18/${countryToCode[user.country]}.png`} className='rounded-lg size-5 mt-2' />} 
 

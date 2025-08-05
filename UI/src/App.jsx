@@ -8,6 +8,7 @@ import SenderList from './components/SenderList'
 import Footer from './components/Footer'
 import Durood from './components/Durood'
 import Countdown from './components/Countdown'
+import ShareButtons from './components/ShareButtons'
 
 function App() {
 
@@ -34,13 +35,14 @@ function App() {
 
   return (
     
-    <div className="bg-[#161515] noto-nastaliq-urdu">
+    <div className="bg-[#063626] noto-nastaliq-urdu">
       <Header language={language} setLang={setLanguage}/>
       <Countdown language={language} />
       <TagLine language={language} />
-      <Durood language={language} />
+      {/* <Durood language={language} /> */}
       <Form language={language} total={total} setTotal={setTotal} />
       <BottonSection language={language} total={total} />
+      <ShareButtons language={language} />
       <SenderList language={language} total={total} />
       <Footer language={language} />
     </div>

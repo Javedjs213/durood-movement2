@@ -9,12 +9,12 @@ function Header({ language, setLang }) {
     }
 
   return (
-    <div className="flex justify-between px-10 py-2 pb-3 pt-2 items-center  bg-[#000]">
+    <div className="flex justify-between px-10 py-2 pb-3 pt-2 items-center  bg-[#063626]">
         <div className='text-[#FFF8DB]'>
-            {language === 'eng' && <div>Durood <br /> Movement 1447<sup>th</sup></div>}
-            {language === 'hindi' && <div> दरूद <br /> आंदोलन 1447<sup>वाँ</sup></div>}
+            {language === 'eng' && <div>Durood <br /> Movement 1447h</div>}
+            {language === 'hindi' && <div> दरूद <br /> आंदोलन 1447ह°</div>}
             {language === 'urdu' && 
-            <div> درود <br /> تحریک ۱۴۴۷<sup>واں</sup></div>
+            <div><div className='flex justify-center'> درود </div> تحریک ۱۴۴۷ھ</div>
             }
             
         </div>
