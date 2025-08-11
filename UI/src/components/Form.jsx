@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { countryToCode } from "./utlis/dataSet";
 import { countryToUrdu } from "./utlis/dataSet";
@@ -7,9 +7,10 @@ import { countryToHindi } from "./utlis/dataSet";
 function Form({ language, total, setTotal }) {
   const [intialData, setIntialData] = useState({
     name: "",
-    country: "",
+    country: "India",
     duroodCount: "",
   });
+  const inputRef  = useRef(null);
 
   const placeholders = {
     eng: {
@@ -58,6 +59,12 @@ function Form({ language, total, setTotal }) {
     }
   };
 
+
+    const handleButtonClick = (e) => {
+    e.preventDefault(); // prevent form submit if needed
+    inputRef.current?.focus();
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setIntialData((prev) => ({
@@ -86,6 +93,7 @@ function Form({ language, total, setTotal }) {
 
       <button
         type="submit"
+         onClick={handleButtonClick}
         className="bg-[#FFF8DB] text-[#063626] px-20 py-2 rounded-4xl pb-3 font-bold"
       >
         {language === "eng" && "SUBMIT DUROOD"}
@@ -115,6 +123,7 @@ function Form({ language, total, setTotal }) {
           {/* Name */}
           <input
             type="text"
+            ref={inputRef}
             name="name"
             className={`${
               language === "urdu" ? "mt-8" : "mt-6"
@@ -122,6 +131,23 @@ function Form({ language, total, setTotal }) {
             placeholder={placeholders[language]?.name || placeholders.eng.name}
             dir={language === "urdu" ? "rtl" : "ltr"}
             value={intialData.name}
+            onChange={handleChange}
+          />
+
+          
+
+          {/* Durood Count */}
+          <input
+            required
+            type="number"
+            name="duroodCount"
+            className="mt-4 p-1 px-2 border-0 shadow rounded-md bg-white pb-2  font-sans"
+            placeholder={
+              placeholders[language]?.duroodCount ||
+              placeholders.eng.duroodCount
+            }
+            dir={language === "urdu" ? "rtl" : "ltr"}
+            value={intialData.duroodCount}
             onChange={handleChange}
           />
 
@@ -151,21 +177,6 @@ function Form({ language, total, setTotal }) {
               </option>
             ))}
           </select>
-
-          {/* Durood Count */}
-          <input
-            required
-            type="number"
-            name="duroodCount"
-            className="mt-4 p-1 px-2 border-0 shadow rounded-md bg-white pb-2  font-sans"
-            placeholder={
-              placeholders[language]?.duroodCount ||
-              placeholders.eng.duroodCount
-            }
-            dir={language === "urdu" ? "rtl" : "ltr"}
-            value={intialData.duroodCount}
-            onChange={handleChange}
-          />
 
           {/* Submit Button */}
           <div className="flex justify-center font-bold">

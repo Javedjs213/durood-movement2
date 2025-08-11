@@ -75,9 +75,16 @@ function SenderList({language, total}) {
         <div className='w-full'>
             {userList.map((user, index) => {
             return (
-                <div key={index} className="flex mt-2 pb-1 justify-between border-b-2 border-gray-600">
+                <div key={index} className="flex mt-2 pb-1 justify-between border-b-2"
+                style={{
+                borderTop: "0px solid transparent",
+                borderRight: "0px solid transparent",
+                borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
+                borderLeft: "0px solid transparent"
+              }}
+                            >
                     <div className='flex gap-3'>
-                        {user.country != "" && <img src={`https://flagcdn.com/24x18/${countryToCode[user.country]}.png`} className='rounded-lg size-5 mt-2' />} 
+                        {user.country != "" && <img src={`https://flagcdn.com/24x18/${countryToCode[user.country]}.png`} className='size-5 mt-2' />} 
 
                         {user.country == "" && 
                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" className='mt-1'

@@ -9,10 +9,12 @@ import Footer from './components/Footer'
 import Durood from './components/Durood'
 import Countdown from './components/Countdown'
 import ShareButtons from './components/ShareButtons'
+import ContactOptions from './components/ContactOptions'
 
 function App() {
 
   const [language, setLanguage] = useState("eng");
+  const [contactVisible, setContactVisible] = useState(false);
   const [total, setTotal] = useState(0);
   const apiUrl = import.meta.env.VITE_API_URI; 
   
@@ -36,7 +38,9 @@ function App() {
   return (
     
     <div className="bg-[#063626] noto-nastaliq-urdu">
-      <Header language={language} setLang={setLanguage}/>
+      {/* <div className={`${contactVisible? "hidden": ""}`}> */}
+      <div className={``}>
+        <Header language={language} setLang={setLanguage}/>
       <Countdown language={language} />
       <TagLine language={language} />
       {/* <Durood language={language} /> */}
@@ -44,7 +48,9 @@ function App() {
       <BottonSection language={language} total={total} />
       <ShareButtons language={language} />
       <SenderList language={language} total={total} />
-      <Footer language={language} />
+      <Footer language={language} onOpen={()=> setContactVisible(true)} />
+      </div>
+      <ContactOptions visibility={contactVisible}  onClose={()=> setContactVisible(false)} />
     </div>
   )
 }

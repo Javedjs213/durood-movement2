@@ -1,7 +1,7 @@
 import React from 'react'
 import ShareButtons from './ShareButtons'
 
-function Footer({language}) {
+function Footer({language, onOpen}) {
 
   const selectLang = {
         eng: {
@@ -19,9 +19,12 @@ function Footer({language}) {
     }
 
   return (
-    <div className='px-10 py-4 mt-15 flex items-center sm:flex-row justify-between bg-[#063626] text-white'>
+    <div className=' pt-4'>
+    <div className='px-10 mt-15 flex items-center sm:flex-row justify-between bg-[#063626] text-white text-sm sm:text-lg'>
       <div>{selectLang[language].tag}</div>
-      <div>Contact</div>
+      <div onClick={onOpen} className='cursor-pointer'>Contact</div>
+    </div>
+    <div className='w-full flex justify-center mt-4 text-[#063626] bg-[#FFF8DB] font-sans text-center text-sm sm:text-md'><span className='italic'>Powered by &nbsp;</span>  Aqsa Islamic Academy Lilbanat Khairabad Mau.</div>
     </div>
   )
 }

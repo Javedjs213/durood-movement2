@@ -6,17 +6,17 @@ function BottonSection({language, total}) {
         hindi: {
             tag: "कुल दरूद एकत्रित",
             discripiton: `"जो मुझ पर एक बार दरूद भेजता है, अल्लाह उस पर दस गुना रहमतें भेजता है..."`,
-            book: "(मुस्लिम शरीफ)"
+            book: "(मुस्लिम)"
         },
         eng: {
             tag: "Total Durood Collected",
             discripiton: `"Whoever sends blessings upon me once, Allah sends blessings upon him tenfold..."`,
-            book: "(Muslim Shareef)"
+            book: "(Muslim)"
         },
         urdu: {
             tag: "کل درود جمع ہو چکے ہیں",
             discripiton: `جو مجھ پر ایک بار درود بھیجتا ہے، اللہ اس پر دس گنا رحمتیں بھیجتا ہے`,
-            book: "(مسلم شریف)"
+            book: "(مسلم)"
         }
     }
 
@@ -39,8 +39,10 @@ function BottonSection({language, total}) {
 
 
         <div className='flex flex-col items-center'>
-            <p  style={{ fontFamily: 'Arial, sans-serif' }} className={`${language == "urdu" ? "text-3xl" : "text-md"} lg:text-xl xl:text-2xl flex justify-center items-center w-[80vw] md:w-[65vw] lg:w-[50vw] text-center`}>{selectLang[language].discripiton}</p>
-            <div className={`${language == "urdu" ? "text:xl" :"text-md"} lg:text-lg w-[80vw] md:w-[65vw] lg:w-[50vw] flex ${language == "urdu" ? "justify-start" :"justify-end"} pt-1 py-3 font`}>{selectLang[language].book}</div>
+            <p className={`${language == "urdu" ? "text-3xl" : "text-md"} lg:text-xl xl:text-2xl flex justify-center items-center w-[80vw] md:w-[65vw] lg:w-[50vw] text-center`}>{selectLang[language].discripiton}</p>
+            <div className={`${language == "urdu" ? "text:xl" :"text-md"} lg:text-lg w-[80vw] md:w-[65vw] lg:w-[50vw] flex ${language == "urdu" ? "justify-start" :"justify-end"} pt-1 py-3 font`}
+            style={{fontFamily: 'Arial, sans-serif'}}
+            >{selectLang[language].book}</div>
         </div>
     </div>
   )
