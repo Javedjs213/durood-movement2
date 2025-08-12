@@ -24,14 +24,14 @@ function BottonSection({language, total}) {
     <div className='w-full flex flex-col items-center mt-5 text-white'>
 <div className="flex flex-col items-center text-white mb-10">
   <h1
-    className="text-5xl sm:text-6xl font-bold"
+    className="text-5xl sm:text-6xl"
     style={{ fontFamily: 'Arial, sans-serif' }}
   >
     {Number(total).toLocaleString('en-IN')}
   </h1>
   <h2
     className="text-base sm:text-lg md:text-xl font-medium"
-    
+    style={{ fontFamily: 'Arial, sans-serif' }}
   >
     {selectLang[language].tag}
   </h2>
