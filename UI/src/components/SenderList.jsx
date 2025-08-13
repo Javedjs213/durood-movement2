@@ -53,7 +53,7 @@ function SenderList({language, total}) {
 
 
 
-      useEffect(()=>{
+  useEffect(()=>{
 
     (async () => {
       try {
@@ -66,7 +66,7 @@ function SenderList({language, total}) {
     })();
 
 
-    },[total])
+  },[total])
 
   return (
     <div className='flex justify-center mt-5 text-white  font-sans'>

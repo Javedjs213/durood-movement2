@@ -24,7 +24,7 @@ function Footer({language, onOpen}) {
       <div>{selectLang[language].tag}</div>
       <div onClick={onOpen} className='cursor-pointer'>Contact</div>
     </div>
-    <div className='w-full flex justify-center mt-4 text-[#063626] bg-[#FFF8DB] font-sans text-center text-sm sm:text-md'><span className='italic'>Powered by &nbsp;</span>  Aqsa Islamic Academy Lilbanat Khairabad Mau.</div>
+    <div className='w-full flex justify-center mt-4 text-[#063626] bg-[#FFF8DB] font-sans text-center max-sm:text-xs sm:text-md'><span className='italic'>Powered by &nbsp;</span>  Aqsa Islamic Academy Lilbanat Khairabad Mau.</div>
     </div>
   )
 }

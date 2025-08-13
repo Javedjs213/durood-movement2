@@ -15,6 +15,10 @@ router.post("/submit", async (req, res) => {
     name = name?.trim();      
     country = country?.trim();
 
+    if(duroodCount > 10000){
+      return res.status(500).json({ status: false, error: "Failed to submit Durood, Must be less then or equal to 10,000" });
+    }
+
     const newSubmission = new Submission({ name, country, duroodCount });
     await newSubmission.save();
 

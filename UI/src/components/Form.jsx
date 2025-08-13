@@ -37,6 +37,11 @@ function Form({ language, total, setTotal }) {
 
     console.log("Submit", intialData);
 
+    if(intialData.duroodCount > 10000){
+      alert("Sorry for Inconvenience, Please submit into small parts such as 10,000");
+      return;
+    }
+
     try {
       const response = await axios.post(`${apiUrl}/submit`, {
         name: intialData.name.trim(),
@@ -45,6 +50,7 @@ function Form({ language, total, setTotal }) {
       });
 
       console.log("Success:", response.data.info);
+      alert("submitted successfully!");
 
       setIntialData({
         name: "",
@@ -56,6 +62,7 @@ function Form({ language, total, setTotal }) {
       setTotal(totalRes.data.info);
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("There is some error, Please try again!");
     }
   };
 

@@ -34,11 +34,11 @@ export default function ContactOptions({onClose, visibility}) {
 
             
             <a
-              href="mailto:shreefjunior10@gmail.com"
+              href="mailto:shareefjunior10@gmail.com"
               className="flex items-center gap-1 p-3 rounded-lg hover:bg-gray-100 transition mt-[-30px]"
             >
               <MdEmail className="text-[#063626] text-3xl mt-2.5" />
-              <span className="text-[#063626]">shreefjunior10@gmail.com</span>
+              <span className="text-[#063626]">shareefjunior10@gmail.com</span>
             </a>
           </div>
         </div>
