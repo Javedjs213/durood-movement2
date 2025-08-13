@@ -42,6 +42,12 @@ function Form({ language, total, setTotal }) {
       return;
     }
 
+  if (intialData.duroodCount < 1) {
+    alert("Durood count must be at least 1.");
+    return;
+  }
+
+
     try {
       const response = await axios.post(`${apiUrl}/submit`, {
         name: intialData.name.trim(),
@@ -147,6 +153,7 @@ function Form({ language, total, setTotal }) {
           <input
             required
             type="number"
+            min={1}
             name="duroodCount"
             className="mt-4 p-1 px-2 border-0 shadow rounded-md bg-white pb-2  font-sans"
             placeholder={
