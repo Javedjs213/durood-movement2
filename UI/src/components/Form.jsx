@@ -68,7 +68,7 @@ function Form({ language, total, setTotal }) {
       setTotal(totalRes.data.info);
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("There is some error, Please try again!");
+      // alert("There is some error, Please try again!");
     }
   };
 
