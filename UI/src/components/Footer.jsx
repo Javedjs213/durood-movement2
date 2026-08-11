@@ -9,7 +9,7 @@ function Footer({language, onOpen}) {
             durood: "Allahumma salli wa sallim wa barik ‘ala Sayyidina Muhammad"
         },
         hindi: {
-            tag: (<>©2026 दरूद आंदोलन 1446ह°</>),
+            tag: (<>©2026 दरूद आंदोलन 1448ह°</>),
             durood: "अल्लाहुम्म सल्लि व सल्लिम व बारिक अला सैय्यिदना मुहम्मद"
         },
         urdu: {
