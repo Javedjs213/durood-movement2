@@ -5,7 +5,7 @@ function Footer({language, onOpen}) {
 
   const selectLang = {
         eng: {
-            tag: (<>©2025 Durood Movement 1447h</>),
+            tag: (<>©2026 Durood Movement 1448h</>),
             durood: "Allahumma salli wa sallim wa barik ‘ala Sayyidina Muhammad"
         },
         hindi: {
